@@ -2,7 +2,7 @@ const Sequelize = require ("sequelize");
 
 const sequelize = require ('../util/database');
 
-const Ballot = sequelize.define('ballot', {
+const ballot = sequelize.define('ballot', {
     id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -31,4 +31,5 @@ const Ballot = sequelize.define('ballot', {
     }
 });
 
-module.exports = Ballot;
+
+module.exports = ballot;
