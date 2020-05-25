@@ -5,6 +5,8 @@ const { validationResult } = require ('express-validator');
 const User = require ('../models/user');
 const { errorStatusCodeHandler } = require ('../util/util');
 
+// const User = models.User;
+
 exports.signup = async (req, res, next) => {
     try {
         // check validation
@@ -97,9 +99,10 @@ exports.login = async (req, res, next) => {
             message: 'Logged in',
             token: token 
         });
-
+        return;
     } catch (err) {
         errorStatusCodeHandler(err);
         next(err);
+        return err;
     };
 };

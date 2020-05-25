@@ -5,17 +5,18 @@ const bodyParser = require ("body-parser");
 const app = express();
 
 // register database connection
-const sequelize = require ('./util/database');
-const errorMiddleware = require('./middleware/error');
+const sequelize = require ('./src/util/database');
+// const { sequelize } = require ('./src/models/index');
+const errorMiddleware = require('./src/middleware/error');
 
 //import models
-const User = require ('./models/user');
-const Ballot = require ('./models/ballot');
+const User = require ('./src/models/user');
+const Ballot = require ('./src/models/ballot');
 
 // import routes
-const adminRoutes = require ('./routes/admin');
-const authRoutes = require ('./routes/auth');
-const voterRoutes = require('./routes/voter');
+const adminRoutes = require ('./src/routes/admin');
+const authRoutes = require ('./src/routes/auth');
+const voterRoutes = require('./src/routes/voter');
 
 // register body-parser
 app.use(bodyParser.json()); //application.json

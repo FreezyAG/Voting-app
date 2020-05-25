@@ -1,5 +1,5 @@
 const Ballot = require ('../models/ballot');
-const { errorStatusCodeHandler, userIsAuthorized } = require ('../../util/util');
+const { errorStatusCodeHandler, userIsAuthorized } = require ('../util/util');
 
 // user checks the voting statistics
 exports.getVotes = async (req, res, next) => {
