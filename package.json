@@ -4,8 +4,7 @@
   "description": "An app that allows users to vote on an opinion, proposal etc.",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "test": "npm run test"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",

@@ -82,7 +82,7 @@ exports.getBallot = async (req, res, next) => {
                 throw error
             }
 
-        // send JSOn response
+        // send JSON response
         res.status(200).json({ ballot: ballot })
 
     } catch (err) {
